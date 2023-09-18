@@ -4,15 +4,14 @@
 ?>
     <h1>Post Result</h1>
 <?php
-if(isset($_POST['my-name'])) {
-?>
-  <p>The Value sent is :</p>
-  <?php
-  echo $_POST['my-name'];
-}else{
-  ?>
-  <p>Nothing posted to this page</p>
-  <?php
-}
+echo getDisplay();
   include "view-footer.php";
+
+function getDisplay(){
+  if (isset($_POST['my-name'])) {
+   return "<p>The Value sent is :</p>" . $_POST['my-name'];
+}else{
+    return "<p>Nothing posted to this page</p>";
+}
+}
 ?>
