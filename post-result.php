@@ -12,6 +12,7 @@ if(isset($_POST['my-name'])) {
 }else{
   ?>
   <p>Nothing posted to this page</p>
+  <?php
 }
   include "view-footer.php";
 ?>
